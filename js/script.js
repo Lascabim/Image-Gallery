@@ -3,7 +3,7 @@ function changeImage(args) {
   var imagem = document.getElementById("imageArt");
   var indexImage = document.getElementById("numberM").textContent;
 
-  var musicNames = ["Welcome To The Rodeo", "Lust", "I"];
+  var musicNames = ["Welcome To The Rodeo", "Beat The Odds", "More Than Life"];
   let iN = indexImage;
 
   if (args == "prev"){
