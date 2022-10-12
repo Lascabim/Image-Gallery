@@ -1,10 +1,11 @@
+var imagem = document.getElementById("imageArt");
+var indexImage = document.getElementById("numberM").textContent;
+
+var musicNames = ["Welcome To The Rodeo", "Beat The Odds", "More Than Life"];
+let iN = indexImage;
+
+
 function changeImage(args) {
-
-  var imagem = document.getElementById("imageArt");
-  var indexImage = document.getElementById("numberM").textContent;
-
-  var musicNames = ["Welcome To The Rodeo", "Beat The Odds", "More Than Life"];
-  let iN = indexImage;
 
   if (args == "prev"){
 
@@ -33,7 +34,27 @@ function changeImage(args) {
 }
 
 function searchImage(){
-  for (var i = 0; i < musicNames.Length; i++) {
-    console.log(musicNames[i]);
+  var searchB = document.getElementById("inputF").value;
+
+  if (searchB != "") {
+    for (var i = 0; i < musicNames.length; i++) {
+
+      // console.log(musicNames[i]);
+      // console.log(searchB);
+
+      if (searchB == musicNames[i]) {
+        console.log("Sucesso");
+
+        imagem.src = "./images/"+(i+1)+".png";
+        document.getElementById("numberM").textContent = i+1;
+        document.getElementById("nameM").textContent = musicNames[i];
+      }
+    }
+  } else {
+    console.log("Caixa de pesquisa vazia!");
+  }
 }
+
+function zoom() {
+  document.body.style.zoom = "90%" 
 }

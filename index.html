@@ -19,7 +19,7 @@
 
   <title>Music Gallery</title>
 </head>
-<body>
+<body onload="zoom()">
 
   <main>
     <img alt="artist" class="artist_image" id="imageArt" src="./images/1.png">    
@@ -34,10 +34,15 @@
         id="inputF"
         type="search" 
         class="input-search" 
-        placeholder="Name or Number" 
+        placeholder="Song Name" 
         required
-        />
+      >
     </form>
+
+
+    <button class="button-search" onclick="searchImage()">
+      &#128269;
+    </button>
 
     <div class="buttons">
       <button onclick="changeImage('prev')" class="button prev">&lt; Prev</button>
